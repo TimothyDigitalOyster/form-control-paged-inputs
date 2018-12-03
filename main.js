@@ -36,7 +36,7 @@ $( document ).ready(function() {
     function numberLinksHandle(clicked) {
       formContainer.removeClass('active')
       clicked.addClass('active');
-      $('.form-element[data-id='+click.data("id")+']').addClass('active');
+      $('.form-element[data-id='+clicked.data("id")+']').addClass('active');
       console.log(clicked.data('id'));
     };
 
