@@ -3,7 +3,10 @@ $( document ).ready(function() {
     var minusButton = $('button[data-id="-"]');
     var numbers = $('.form-element-numbers')
     var pages = $('form-element-pages');
-    var getPages = $('.form-element-input').size();
+
+    function getPages(){
+      return $('.form-element-input').size();
+    } 
 
 
     plusButton.on("click", function() {
