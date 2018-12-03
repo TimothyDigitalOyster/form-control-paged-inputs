@@ -1,11 +1,11 @@
 $( document ).ready(function() {
     //Selectors
-    var formContainer = $('form-container');
-    var plusButton = $('button[data-id="+"]');
-    var minusButton = $('button[data-id="-"]');
-    var numbers = $('.form-element-numbers');
-    var numberLinks = $('.form-element-numbers a');
-    var pages = $('form-element-pages');
+    var formContainer = $('.form-element-container');
+    var plusButton = $('.form-element-container button[data-id="+"]');
+    var minusButton = $('.form-element-container button[data-id="-"]');
+    var numbers = $('.form-element-container .form-element-numbers');
+    var numberLinks = $('.form-element-container .form-element-numbers a');
+    var pages = $('.form-element-container .form-element-pages');
 
     //Functions
     function getPages(){
