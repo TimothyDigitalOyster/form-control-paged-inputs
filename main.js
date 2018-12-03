@@ -31,8 +31,10 @@ $( document ).ready(function() {
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /><p>"+newPage+"</p></div>");
       updateAll();
     };
-    function minusHandle() {
+    function minusHandle(clicked) {
       lazy();
+      $('.form-element-input[data-id='+clicked.data("id")+']').remove();
+      clicked.remove();
       numberLinks[0].addClass('active');
       pages[0].addClass('active');
       updateAll();
@@ -46,7 +48,9 @@ $( document ).ready(function() {
 
     //Click Events
     plusButton.on("click", plusHandle);
-    minusButton.on("click", minusHandle);
+    minusButton.on("click", function() {
+      minusHandle($(this));
+    );
     numberLinks.on("click", function(){
       numberLinksHandle($(this));
     });
