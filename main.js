@@ -18,7 +18,7 @@ $( document ).ready(function() {
       numbers.off("click");
       numbers = $('.form-element-numbers a');
       numbers.on("click", function(){
-        numberLinksHandle($(this));
+        numbersHandle($(this));
       });
     };
 
@@ -41,11 +41,11 @@ $( document ).ready(function() {
       pages.first().addClass('active');
       updateAll();
     };
-    function numberLinksHandle(clicked) {
+    function numbersHandle(clicked) {
       lazy();
       clicked.addClass('active');
       $('.form-element-input[data-id='+clicked.data("id")+']').addClass('active');
-      console.log(clicked.data('id'));
+      //console.log(clicked.data('id'));
     };
 
     //Click Events
@@ -53,8 +53,8 @@ $( document ).ready(function() {
     minusButton.on("click", function() {
       minusHandle($(this));
     });
-    numberLinks.on("click", function(){
-      numberLinksHandle($(this));
+    numbers.on("click", function(){
+      numbersHandle($(this));
     });
 
     // Init
