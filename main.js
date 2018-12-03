@@ -33,8 +33,8 @@ $( document ).ready(function() {
       pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
       updateAll();
     };
-    function minusHandle(clicked) {
-      lazy();
+    function minusHandle() {
+      //lazy();
       $('.form-element-input.active').remove();
       $('.form-element-numbers a.active').remove();
       numbers.first().addClass('active');
