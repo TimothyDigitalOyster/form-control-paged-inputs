@@ -42,4 +42,7 @@ $( document ).ready(function() {
     numberLinks.on("click", function(){
       numberLinksHandle($(this));
     });
+
+    // Init
+    updateAll();
 });
