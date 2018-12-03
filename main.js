@@ -12,27 +12,35 @@ $( document ).ready(function() {
     }
 
     function updateAll() {
+      numberLinks.off("click");
       numberLinks = $('.form-element-numbers a');
-
+      numberLinks.on("click", numberLinksHandle(this));
     }
-
     //Click Handlers
-    plusButton.on("click", function() {
+    function plusHandle() {
       var newPage = getPages() + 1;
       $('.active').removeClass('active');
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
       updateAll();
-    });
+    };
 
-    minusButton.on("click", function() {
+    function minusHandle() {
       $('.form-element-container .active').remove();
       numbers[1].addClass('active');
       pages[1].addClass('active');
       updateAll();
-    });
+    };
 
-    numberLinks.on("click", function() {
+    function numberLinksHandle(this) {
       console.log($(this).data("id"));
-    })
+    }
+    //Click Events
+    plusButton.on("click", plusHandle());
+
+    minusButton.on("click", minusHandle());
+
+    numberLinks.on("click", numberLinksHandle(this));
+
+    });
 });
