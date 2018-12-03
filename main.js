@@ -4,9 +4,10 @@ $( document ).ready(function() {
     var formContainer = $('.form-element-container');
     var plusButton = $('.form-element-container button[data-id="+"]');
     var minusButton = $('.form-element-container button[data-id="-"]');
-    var numbers = $('.form-element-container .form-element-numbers');
-    var numberLinks = $('.form-element-container .form-element-numbers a');
-    var pages = $('.form-element-container .form-element-pages');
+    var numberContainer = $('.form-element-container .form-element-numbers');
+    var numbers = $('.form-element-container .form-element-numbers a');
+    var pageContainer = $('.form-element-container .form-element-pages');
+    var pages = $('.form-element-container .form-element-pages .form-element-input');
 
     //Functions
     function getPages(){
@@ -14,9 +15,9 @@ $( document ).ready(function() {
     };
 
     function updateAll() {
-      numberLinks.off("click");
-      numberLinks = $('.form-element-numbers a');
-      numberLinks.on("click", function(){
+      numbers.off("click");
+      numbers = $('.form-element-numbers a');
+      numbers.on("click", function(){
         numberLinksHandle($(this));
       });
     };
@@ -28,15 +29,15 @@ $( document ).ready(function() {
     function plusHandle() {
       var newPage = getPages() + 1;
       lazy();
-      numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
-      pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /><p>"+newPage+"</p></div>");
+      numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
+      pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
       updateAll();
     };
     function minusHandle(clicked) {
       lazy();
       $('.form-element-input[data-id='+clicked.data("id")+']').remove();
       clicked.remove();
-      numberLinks.first().addClass('active');
+      numbers.first().addClass('active');
       pages.first().addClass('active');
       updateAll();
     };
