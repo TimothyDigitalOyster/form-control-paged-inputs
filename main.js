@@ -36,8 +36,8 @@ $( document ).ready(function() {
       lazy();
       $('.form-element-input[data-id='+clicked.data("id")+']').remove();
       clicked.remove();
-      numberLinks[0].addClass('active');
-      pages[0].addClass('active');
+      numberLinks.first().addClass('active');
+      pages.first().addClass('active');
       updateAll();
     };
     function numberLinksHandle(clicked) {
