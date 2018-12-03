@@ -28,8 +28,8 @@ $( document ).ready(function() {
     };
     function minusHandle() {
       $('.form-element-container .active').remove();
-      numbers[1].addClass('active');
-      pages[1].addClass('active');
+      numbers[0].addClass('active');
+      pages[0].addClass('active');
       updateAll();
     };
     function numberLinksHandle(clicked) {
