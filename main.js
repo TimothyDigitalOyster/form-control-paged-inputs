@@ -5,8 +5,9 @@ $( document ).ready(function() {
     var pages = $('form-element-pages');
     var getPages = $('.form-element-input').size();
 
+
     plusButton.on("click", function() {
-      var newPage = getPages + 1;
+      var newPage = getPages() + 1;
       $('.active').removeClass('active');
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
@@ -17,4 +18,8 @@ $( document ).ready(function() {
       numbers[0].addClass('active');
       pages[0].addClass('active');
     });
+
+    number.on("click", function() {
+        console.log(this.data("id"));
+    })
 });
