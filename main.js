@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     //Selectors
+    var formContainer = $('form-container');
     var plusButton = $('button[data-id="+"]');
     var minusButton = $('button[data-id="-"]');
     var numbers = $('.form-element-numbers');
@@ -23,7 +24,7 @@ $( document ).ready(function() {
       var newPage = getPages() + 1;
       $('.active').removeClass('active');
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
-      pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
+      pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /><p>"+newPage+"</p></div>");
       updateAll();
     };
     function minusHandle() {
@@ -33,7 +34,10 @@ $( document ).ready(function() {
       updateAll();
     };
     function numberLinksHandle(clicked) {
-      console.log(clicked.data("id"));
+      formContainer.removeClass('active')
+      clicked.addClass('active');
+      $('.form-element[data-id='+click.data("id")+']').addClass('active');
+      console.log(clicked.data('id'));
     };
 
     //Click Events
