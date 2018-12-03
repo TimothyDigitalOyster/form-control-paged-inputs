@@ -10,7 +10,7 @@ $( document ).ready(function() {
     //Functions
     function getPages(){
       return $('.form-element-numbers a').size();
-    }
+    };
 
     function updateAll() {
       numberLinks.off("click");
@@ -18,11 +18,11 @@ $( document ).ready(function() {
       numberLinks.on("click", function(){
         numberLinksHandle($(this));
       });
-    }
+    };
 
     function lazy() {
-      $('.form-element-container .active').remove();
-    }
+      $('.form-element-container .active').removeClass('active');
+    };
     //Click Handlers
     function plusHandle() {
       var newPage = getPages() + 1;
