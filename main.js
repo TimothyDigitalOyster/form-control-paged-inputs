@@ -28,8 +28,8 @@ $( document ).ready(function() {
     };
     function minusHandle() {
       $('.form-element-container .active').remove();
-      //numberLinks[0].addClass('active');
-      //pages[0].addClass('active');
+      numberLinks[0].addClass('active');
+      pages[0].addClass('active');
       updateAll();
     };
     function numberLinksHandle(clicked) {
@@ -37,8 +37,8 @@ $( document ).ready(function() {
     };
 
     //Click Events
-    plusButton.on("click", plusHandle());
-    minusButton.on("click", minusHandle());
+    plusButton.on("click", plusHandle);
+    minusButton.on("click", minusHandle);
     numberLinks.on("click", function(){
       numberLinksHandle($(this));
     });
