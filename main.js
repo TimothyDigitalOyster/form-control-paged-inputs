@@ -36,7 +36,8 @@ $( document ).ready(function() {
     function minusHandle(clicked) {
       lazy();
       $('.form-element-input[data-id='+clicked.data("id")+']').remove();
-      clicked.remove();
+      $('.form-element-numbers[data-id='+clicked.data("id")+'] a').remove();
+      //clicked.remove();
       numbers.first().addClass('active');
       pages.first().addClass('active');
       updateAll();
