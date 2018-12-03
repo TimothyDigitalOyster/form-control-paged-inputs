@@ -34,13 +34,9 @@ $( document ).ready(function() {
 
     function numberLinksHandle(this) {
       console.log($(this).data("id"));
-    }
+    };
     //Click Events
     plusButton.on("click", plusHandle());
-
     minusButton.on("click", minusHandle());
-
-    numberLinks.on("click", numberLinksHandle(this));
-
-    });
+    numberLinks.on("click", numberLinksHandle(this));  
 });
