@@ -9,7 +9,7 @@ $( document ).ready(function() {
       var newPage = getPages + 1;
       $('.active').removeClass('active');
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
-      pages.append("<div class='form-element-input active" data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
+      pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
     });
 
     minusButton.on("click", function() {
