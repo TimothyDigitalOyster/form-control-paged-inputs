@@ -19,7 +19,7 @@ $( document ).ready(function() {
       pages[0].addClass('active');
     });
 
-    number.on("click", function() {
+    numbers.on("click", function() {
         console.log(this.data("id"));
     })
 });
