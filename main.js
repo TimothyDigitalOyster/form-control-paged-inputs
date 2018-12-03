@@ -31,13 +31,13 @@ $( document ).ready(function() {
       updateAll();
     };
     function numberLinksHandle(this) {
-      console.log($(this).data("id"));
+      console.log(this.data("id"));
     };
 
     //Click Events
     plusButton.on("click", plusHandle());
     minusButton.on("click", minusHandle());
     numberLinks.on("click", function(){
-      numberLinksHandle(this);
+      numberLinksHandle($(this));
     });
 });
