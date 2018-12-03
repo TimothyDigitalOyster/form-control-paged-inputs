@@ -28,7 +28,7 @@ $( document ).ready(function() {
     };
     function minusHandle() {
       $('.form-element-container .active').remove();
-      numbers[0].addClass('active');
+      numberLinks[0].addClass('active');
       pages[0].addClass('active');
       updateAll();
     };
