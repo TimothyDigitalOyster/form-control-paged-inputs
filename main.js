@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     //Selectors
+
     var formContainer = $('.form-element-container');
     var plusButton = $('.form-element-container button[data-id="+"]');
     var minusButton = $('.form-element-container button[data-id="-"]');
@@ -50,7 +51,7 @@ $( document ).ready(function() {
     plusButton.on("click", plusHandle);
     minusButton.on("click", function() {
       minusHandle($(this));
-    );
+    });
     numberLinks.on("click", function(){
       numberLinksHandle($(this));
     });
