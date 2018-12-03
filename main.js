@@ -14,7 +14,9 @@ $( document ).ready(function() {
     function updateAll() {
       numberLinks.off("click");
       numberLinks = $('.form-element-numbers a');
-      numberLinks.on("click", numberLinksHandle(this));
+      numberLinks.on("click", function(){
+        numberLinksHandle($(this));
+      });
     }
     //Click Handlers
     function plusHandle() {
