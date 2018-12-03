@@ -19,22 +19,26 @@ $( document ).ready(function() {
         numberLinksHandle($(this));
       });
     }
+
+    function lazy() {
+      $('.form-element-container .active').remove();
+    }
     //Click Handlers
     function plusHandle() {
       var newPage = getPages() + 1;
-      $('.active').removeClass('active');
+      lazy();
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /><p>"+newPage+"</p></div>");
       updateAll();
     };
     function minusHandle() {
-      $('.form-element-container .active').remove();
+      lazy();
       numberLinks[0].addClass('active');
       pages[0].addClass('active');
       updateAll();
     };
     function numberLinksHandle(clicked) {
-      $('.form-element-container .active').removeClass('active')
+      lazy();
       clicked.addClass('active');
       $('.form-element[data-id='+clicked.data("id")+']').addClass('active');
       console.log(clicked.data('id'));
