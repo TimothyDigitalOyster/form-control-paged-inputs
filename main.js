@@ -40,7 +40,7 @@ $( document ).ready(function() {
     function numberLinksHandle(clicked) {
       lazy();
       clicked.addClass('active');
-      $('.form-element[data-id='+clicked.data("id")+']').addClass('active');
+      $('.form-element-input[data-id='+clicked.data("id")+']').addClass('active');
       console.log(clicked.data('id'));
     };
 
