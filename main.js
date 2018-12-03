@@ -29,7 +29,7 @@ $( document ).ready(function() {
     function minusHandle() {
       $('.form-element-container .active').remove();
       //numberLinks[0].addClass('active');
-      pages[0].addClass('active');
+      //pages[0].addClass('active');
       updateAll();
     };
     function numberLinksHandle(clicked) {
