@@ -5,12 +5,13 @@ $( document ).ready(function() {
     var pages = $('form-element-pages');
 
     function getPages(){
-      return $('.form-element-input').size();
-    } 
+      return $('.form-element-numbers a').size();
+    }
 
 
     plusButton.on("click", function() {
       var newPage = getPages() + 1;
+
       $('.active').removeClass('active');
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
