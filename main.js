@@ -18,12 +18,14 @@ $( document ).ready(function() {
       $('.active').removeClass('active');
       numbers.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
+      numberLinks = $('.form-element-numbers a');
     });
 
     minusButton.on("click", function() {
       $('.form-element-container .active').remove();
       numbers[1].addClass('active');
       pages[1].addClass('active');
+      numberLinks = $('.form-element-numbers a');
     });
 
     numberLinks.on("click", function() {
