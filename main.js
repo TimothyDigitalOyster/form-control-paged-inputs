@@ -24,19 +24,20 @@ $( document ).ready(function() {
       pages.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='former-name-"+newPage+"' /></div>");
       updateAll();
     };
-
     function minusHandle() {
       $('.form-element-container .active').remove();
       numbers[1].addClass('active');
       pages[1].addClass('active');
       updateAll();
     };
-
     function numberLinksHandle(this) {
       console.log($(this).data("id"));
     };
+
     //Click Events
     plusButton.on("click", plusHandle());
     minusButton.on("click", minusHandle());
-    numberLinks.on("click", numberLinksHandle(this));  
+    numberLinks.on("click", function(){
+      numberLinksHandle(this);
+    });
 });
