@@ -24,6 +24,7 @@ $( document ).ready(function() {
     });
 
     numbers.on("click", function() {
-        console.log(this.data("id"));
+      var $this = $(this);
+      console.log($this.data("id"));
     })
 });
