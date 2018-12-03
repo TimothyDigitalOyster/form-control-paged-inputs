@@ -35,10 +35,8 @@ $( document ).ready(function() {
     };
     function minusHandle(clicked) {
       lazy();
-
       $('.form-element-input.active').remove();
       $('.form-element-numbers a.active').remove();
-      //clicked.remove();
       numbers.first().addClass('active');
       pages.first().addClass('active');
       updateAll();
@@ -52,9 +50,7 @@ $( document ).ready(function() {
 
     //Click Events
     plusButton.on("click", plusHandle);
-    minusButton.on("click", function() {
-      minusHandle($(this));
-    });
+    minusButton.on("click", minusHandle);
     numbers.on("click", function(){
       numbersHandle($(this));
     });
