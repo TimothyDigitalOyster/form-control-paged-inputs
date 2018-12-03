@@ -1,14 +1,17 @@
 $( document ).ready(function() {
+    //Selectors
     var plusButton = $('button[data-id="+"]');
     var minusButton = $('button[data-id="-"]');
-    var numbers = $('.form-element-numbers')
+    var numbers = $('.form-element-numbers');
+    var numberLinks = $('.form-element-numbers a');
     var pages = $('form-element-pages');
 
+    //Functions
     function getPages(){
       return $('.form-element-numbers a').size();
     }
 
-
+    //Click Handlers
     plusButton.on("click", function() {
       var newPage = getPages() + 1;
 
@@ -19,11 +22,11 @@ $( document ).ready(function() {
 
     minusButton.on("click", function() {
       $('.form-element-container .active').remove();
-      numbers[0].addClass('active');
-      pages[0].addClass('active');
+      numbers[1].addClass('active');
+      pages[1].addClass('active');
     });
 
-    numbers.on("click", function() {
+    numberLinks.on("click", function() {
       console.log($(this).data("id"));
     })
 });
