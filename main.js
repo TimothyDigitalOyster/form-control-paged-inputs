@@ -30,8 +30,8 @@ $( document ).ready(function() {
       pages[1].addClass('active');
       updateAll();
     };
-    function numberLinksHandle(this) {
-      console.log(this.data("id"));
+    function numberLinksHandle(clicked) {
+      console.log(clicked.data("id"));
     };
 
     //Click Events
