@@ -30,8 +30,10 @@ $( document ).ready(function() {
     };
     function resetNumbers() {
       $numbers.each( function(i) {
-          $(this).data("id", i).text(i);
-          $pages[i].data("id", i).children().attr("id", field+"-"+i);
+          $(this).data("id", i + 1).text(i + 1);
+      });
+      $pages.each(function(i) {
+          $(this).data("id", i + 1).children().attr("id", field+"-"+(i+1));
       });
     };
 
