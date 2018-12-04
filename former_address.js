@@ -49,13 +49,14 @@ $( document ).ready(function() {
       }
     };
     function minusHandle() {
-      //lazy();
-      $(element+' .form-element-input.active').remove();
-      $(element+' .form-element-numbers a.active').remove();
-      resetNumbers();
-      $numbers.first().addClass('active');
-      $pages.first().addClass('active');
-      updateAll();
+      if (getPages() > 1 ){
+        $(element+' .form-element-input.active').remove();
+        $(element+' .form-element-numbers a.active').remove();
+        resetNumbers();
+        $numbers.first().addClass('active');
+        $pages.first().addClass('active');
+        updateAll();
+      }
     };
     function numbersHandle(clicked) {
       lazy();
