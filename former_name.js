@@ -50,7 +50,7 @@ $( document ).ready(function() {
         $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='"+field+"-"+newPage+"' /></div>");
         updateAll();
       }
-    };
+    }; 
     function minusHandle() {
       if (getPages() > 1 ){
         $(element+' .form-element-input.active').remove();
