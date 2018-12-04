@@ -41,12 +41,12 @@ $( document ).ready(function() {
     };
 
     function showElements() {
-      $(element+' .element-show').css("display","none");
-      $(element+' .element-hide').css("display","block");
+      $(element+' .element-show').css("display","block");
+      $(element+' .element-hide').css("display","none");
     };
     function hideElements() {
-      $(element+' .element-hide').css("display","none");
-      $(element+' .element-show').css("display","block");
+      $(element+' .element-hide').css("display","block");
+      $(element+' .element-show').css("display","none");
     };
 
     //Click Handlers
