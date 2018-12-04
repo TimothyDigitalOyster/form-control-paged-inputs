@@ -1,35 +1,76 @@
-<div class="former-name form-element-container">
-  <div class="form-element-title"><p>Former Name(s):</p></div>
-  <div class="form-element-pagination">
-    <div class="form-element-numbers">
-    	<a href='#' class="active" data-id=1>1</a>
+<form>
+  <div class="former-name form-element-container">
+    <div class="form-element-topbar">
+      <div class="form-element-title element-hide">
+        <p>Do you have any former names? <a href="#" class="show-elements">Yes</a> / No</p>
+      </div>
+      <div class="form-element-title element-show">
+        <p><a href="#" class="hide-elements">&#x3C; back</a> Former Name(s):</p>
+      </div>
+      <div class="form-element-pagination element-show">
+        <div class="form-element-numbers">
+          <a href='#' class="active" data-id=1>1</a>
+        </div>
+        <div class="form-element-controls">
+          <button type="button" href='#' class="active" data-id="+">+</button>
+          <button type="button" href='#' class="active" data-id="-">-</button>
+        </div>
+      </div>
     </div>
-    <div class="form-element-controls">
-      	<button type="button" href='#' class="active" data-id="+">+</button>
-		<button type="button" href='#' class="active" data-id="-">-</button>
+    <div class="form-element-pages element-show">
+      <div class="form-element-input active" data-id=1>
+        <input type="text" class="input" id="former-name-1" />
     </div>
-  </div>
-  <div class="form-element-pages">
-    <div class="form-element-input active" data-id=1>
-      <input type="text" class="input" id="former-name-1" />
+      </div>
     </div>
-  </div>
-</div> 
 
-<div class="former-address form-element-container">
-  <div class="form-element-title"><p>Former Addresse(s):</p></div>
-  <div class="form-element-pagination">
-    <div class="form-element-numbers">
-    	<a href='#' class="active" data-id=1>1</a>
+    <div class="former-address form-element-container">
+      <div class="form-element-topbar">
+        <div class="form-element-title element-hide">
+          <p>Do you have any former addresses? <a href="#" class="show-elements">Yes</a> / No</p>
+        </div>
+        <div class="form-element-title element-show">
+          <p><a href="#" class="hide-elements">&#x3C; back</a> Former Address(es):</p>
+        </div>
+
+        <div class="form-element-pagination">
+          <div class="form-element-numbers">
+            <a href='#' class="active" data-id=1>1</a>
+          </div>
+          <div class="form-element-controls">
+            <button type="button" href='#' class="active" data-id="+">+</button>
+            <button type="button" href='#' class="active" data-id="-">-</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-element-pages element-show">
+        <div class="form-element-input active" data-id=1>
+          <textarea class="input" id="former-address-1"></textarea>
+        </div>
+      </div>
     </div>
-    <div class="form-element-controls">
-      	<button type="button" href='#' class="active" data-id="+">+</button>
-		<button type="button" href='#' class="active" data-id="-">-</button>
+    <div id="container-sig" class="form-container">
+
+      <div id="signature-pad" class="signature-pad">
+        <div class="signature-pad--body">
+          <canvas></canvas>
+        </div>
+        <div class="signature-pad--footer">
+          <div class="description">Sign above</div>
+          <div class="signature-pad--actions">
+            <div>
+              <button type="button" class="button clear" data-action="clear">Clear</button>
+              <button type="button" class="button" data-action="undo">Undo</button>
+            </div>
+            <div>
+              <button type="button" class="button save" data-action="save-png">Save Signature</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="form-element-pages">
-    <div class="form-element-input active" data-id=1>
-      <textarea class="input" id="former-address-1"></textarea>
+    <div id="container-submit" class="form-container">
+      <input type="hidden" id="sig-field" />
+      <button id="submit" type="button" data-action="submit-form" class="form-submit-button" disabled>Submit Online Application</button>
     </div>
-  </div>
-</div>
+</form>

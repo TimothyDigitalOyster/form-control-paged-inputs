@@ -6,6 +6,8 @@ $( document ).ready(function() {
     //var $formContainer = $(element);
     var $plusButton = $(element+' button[data-id="+"]');
     var $minusButton = $(element+' button[data-id="-"]');
+    var $showButton = $(element+'.show-elements');
+    var $hideButton = $(element+'.hide-elements');
     var $numberContainer = $(element+' .form-element-numbers');
     var $numbers = $(element+' .form-element-numbers a');
     var $pageContainer = $(element+' .form-element-pages');
@@ -41,6 +43,15 @@ $( document ).ready(function() {
       });
     };
 
+    function showElements() {
+      $(element+' .element-show').show();
+      $(element+' .element-hide').hide();
+    };
+    function hideElements() {
+      $(element+' .element-hide').show();
+      $(element+' .element-show').hide();
+    };
+
     //Click Handlers
     function plusHandle() {
       if ($(element+' .form-element-input.active input').val() != '') {
@@ -50,7 +61,7 @@ $( document ).ready(function() {
         $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='"+field+"-"+newPage+"' /></div>");
         updateAll();
       }
-    }; 
+    };
     function minusHandle() {
       if (getPages() > 1 ){
         $(element+' .form-element-input.active').remove();
@@ -75,6 +86,8 @@ $( document ).ready(function() {
     $numbers.on("click", function(){
       numbersHandle($(this));
     });
+    $showButton.on("click", showElements);
+    $hideButton.on("click", hideElements);
 
     // Init
     updateAll();
