@@ -44,6 +44,7 @@ $( document ).ready(function() {
     };
 
     function showElements() {
+      console.log("showElements()");
       //$(element+' .element-show').css("display","none");
       //$(element+' .element-hide').css("display","block");
       $(element+' .element-show').hide();

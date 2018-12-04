@@ -1,7 +1,16 @@
 .form-element-container {
+  .form-element-topbar {
+    border-bottom: 1px darkgrey solid;
+  }
   .form-element-title {
     padding-bottom: 10px;
     font-size: large;
+    &.show-element {
+      width:100%;
+    }
+    &.hide-element {
+      width:50%;
+    }
   }
   .form-element-pagination {
     display: block;
