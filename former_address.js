@@ -39,7 +39,7 @@ $( document ).ready(function() {
       var newPage = getPages() + 1;
       lazy();
       $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
-      $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='"+field+"-"+newPage+"' /></div>");
+      $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><textarea class='input' id='"+field+"-"+newPage+"'></textarea></div>");
       updateAll();
     };
     function minusHandle() {

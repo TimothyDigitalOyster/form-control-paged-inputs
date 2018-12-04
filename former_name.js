@@ -26,12 +26,12 @@ $( document ).ready(function() {
       $(element+' .active').removeClass('active');
     };
     function resetNumbers() {
-      var i=1;
-      $numbers.foreach( function($number) {
-          $number.data("id", i).text(i);
-          $pages[i].data("id", i).children().attr("id", field+"-"+i);
-          ++i;
-      });
+      //var i=1;
+      //$numbers.foreach( function($number) {
+      //    $number.data("id", i).text(i);
+      //    $pages[i].data("id", i).children().attr("id", field+"-"+i);
+      //    ++i;
+      //});
     };
 
     //Click Handlers
@@ -43,7 +43,6 @@ $( document ).ready(function() {
       updateAll();
     };
     function minusHandle() {
-      //lazy();
       $(element+' .form-element-input.active').remove();
       $(element+' .form-element-numbers a.active').remove();
       $numbers.first().addClass('active');
@@ -55,8 +54,6 @@ $( document ).ready(function() {
       clicked.addClass('active');
       resetNumbers();
       $(element+' .form-element-input[data-id='+clicked.data("id")+']').addClass('active');
-
-      //console.log(clicked.data('id'));
     };
 
     //Click Events
