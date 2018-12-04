@@ -44,10 +44,12 @@ $( document ).ready(function() {
     };
 
     function showElements() {
+      console.log('show');
       $(element+' .element-show').css("display","block");
       $(element+' .element-hide').css("display","none");
     };
     function hideElements() {
+      console.log('hide');
       $(element+' .element-hide').css("display","block");
       $(element+' .element-show').css("display","none");
     };
