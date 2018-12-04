@@ -27,11 +27,11 @@ $( document ).ready(function() {
     };
     function resetNumbers() {
       var i=1;
-      foreach($numbers as $number) {
-          number.data("id", i).text(i);
-          pages[i].data("id", i).children().attr("id", field+"-"+i);
+      $numbers.foreach( function($number) {
+          $number.data("id", i).text(i);
+          $pages[i].data("id", i).children().attr("id", field+"-"+i);
           ++i;
-      }
+      });
     };
 
     //Click Handlers

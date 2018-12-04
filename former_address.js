@@ -12,7 +12,7 @@ $( document ).ready(function() {
     var $pages = $(element+' .form-element-pages .form-element-input');
 
     //Functions
-    function getPages(){
+    function getPages() {
       return $(element+' .form-element-numbers a').size();
     };
     function updateAll() {
@@ -27,11 +27,11 @@ $( document ).ready(function() {
     };
     function resetNumbers() {
       var i=1;
-      foreach($numbers as $number) {
-          number.data("id", i).text(i);
-          pages[i].data("id", i).children().attr("id", field+"-"+i);
+      $numbers.foreach( function($number) {
+          $number.data("id", i).text(i);
+          $pages[i].data("id", i).children().attr("id", field+"-"+i);
           ++i;
-      }
+      });
     };
 
     //Click Handlers
