@@ -43,12 +43,13 @@ $( document ).ready(function() {
 
     //Click Handlers
     function plusHandle() {
-      //console.log("plusHandle()");
-      var newPage = getPages() + 1;
-      lazy();
-      $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
-      $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='"+field+"-"+newPage+"' /></div>");
-      updateAll();
+      if ($(element+' .form-element-input.active input').val() != '') {
+        var newPage = getPages() + 1;
+        lazy();
+        $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
+        $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='"+field+"-"+newPage+"' /></div>");
+        updateAll();
+      }
     };
     function minusHandle() {
       //console.log("minusHandle()");
