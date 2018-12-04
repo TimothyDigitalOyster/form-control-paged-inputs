@@ -40,7 +40,7 @@ $( document ).ready(function() {
 
     //Click Handlers
     function plusHandle() {
-      if ($(element+' .form-element-input.active input').val() != '') {
+      if ($(element+' .form-element-input.active textarea').val() != '') {
         var newPage = getPages() + 1;
         lazy();
         $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
