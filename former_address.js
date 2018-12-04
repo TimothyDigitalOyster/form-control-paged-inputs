@@ -29,12 +29,12 @@ $( document ).ready(function() {
       $numbers = $(element+' .form-element-numbers a');
       $numbers.each( function(i) {
           var j = i + 1;
-          $(this).data("id", j).text(j);
+          $(this).attr("data-id", j).text(j);
       });
       $pages = $(element+' .form-element-pages .form-element-input');
       $pages.each(function(i) {
           var j = i + 1;
-          $(this).data("id", j).children().attr("id", field+"-"+j);
+          $(this).attr("data-id", j).children().attr("id", field+"-"+j);
       });
     };
 
@@ -58,7 +58,7 @@ $( document ).ready(function() {
     function numbersHandle(clicked) {
       lazy();
       clicked.addClass('active');
-      $(element+' .form-element-input[data-id='+clicked.data("id")+']').addClass('active');
+      $(element+' .form-element-input[data-id='+clicked.attr("data-id")+']').addClass('active');
 
       //console.log(clicked.data('id'));
     };
