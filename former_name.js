@@ -51,6 +51,7 @@ $( document ).ready(function() {
       //console.log("minusHandle()");
       $(element+' .form-element-input.active').remove();
       $(element+' .form-element-numbers a.active').remove();
+      resetNumbers();
       $numbers.first().addClass('active');
       $pages.first().addClass('active');
       updateAll();
@@ -59,7 +60,7 @@ $( document ).ready(function() {
       //console.log("numbersHandle()");
       lazy();
       clicked.addClass('active');
-      resetNumbers();
+
       $(element+' .form-element-input[data-id='+clicked.data("id")+']').addClass('active');
     };
 

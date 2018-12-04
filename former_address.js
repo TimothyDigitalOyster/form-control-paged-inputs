@@ -46,6 +46,7 @@ $( document ).ready(function() {
       //lazy();
       $(element+' .form-element-input.active').remove();
       $(element+' .form-element-numbers a.active').remove();
+      resetNumbers();
       $numbers.first().addClass('active');
       $pages.first().addClass('active');
       updateAll();
@@ -53,7 +54,6 @@ $( document ).ready(function() {
     function numbersHandle(clicked) {
       lazy();
       clicked.addClass('active');
-      resetNumbers();
       $(element+' .form-element-input[data-id='+clicked.data("id")+']').addClass('active');
 
       //console.log(clicked.data('id'));
