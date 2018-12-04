@@ -6,8 +6,8 @@ $( document ).ready(function() {
     //var $formContainer = $(element);
     var $plusButton = $(element+' button[data-id="+"]');
     var $minusButton = $(element+' button[data-id="-"]');
-    var $showButton = $(element+'.show-elements');
-    var $hideButton = $(element+'.hide-elements');
+    var $showButton = $(element+' .show-elements');
+    var $hideButton = $(element+' .hide-elements');
     var $numberContainer = $(element+' .form-element-numbers');
     var $numbers = $(element+' .form-element-numbers a');
     var $pageContainer = $(element+' .form-element-pages');
