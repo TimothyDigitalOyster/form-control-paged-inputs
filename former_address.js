@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     //Classes
-    var field = 'former_address';
+    var field = 'former-address';
     var element = '.'+field;
     //Selectors
     //var $formContainer = $(element);

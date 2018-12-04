@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     //Classes
-    var field = 'former_name';
+    var field = 'former-name';
     var element = '.'+field;
     //Selectors
     //var $formContainer = $(element);
@@ -13,11 +13,11 @@ $( document ).ready(function() {
 
     //Functions
     function getPages(){
-      console.log("getPages()");
+      //console.log("getPages()");
       return $(element+' .form-element-numbers a').size();
     };
     function updateAll() {
-      console.log("updateAll()");
+      //console.log("updateAll()");
       $numbers.off("click");
       $numbers = $(element+' .form-element-numbers a');
       $numbers.on("click", function(){
@@ -25,22 +25,22 @@ $( document ).ready(function() {
       });
     };
     function lazy() {
-      console.log("lazy()");
+      //console.log("lazy()");
       $(element+' .active').removeClass('active');
     };
     function resetNumbers() {
-      console.log("resetNumber()");
-      //var i=1;
-      //$numbers.foreach( function($number) {
-      //    $number.data("id", i).text(i);
-      //    $pages[i].data("id", i).children().attr("id", field+"-"+i);
-      //    ++i;
-      //});
+      //console.log("resetNumber()");
+      var i=1;
+      $numbers.foreach( function($number) {
+          $number.data("id", i).text(i);
+          $pages[i].data("id", i).children().attr("id", field+"-"+i);
+          ++i;
+      });
     };
 
     //Click Handlers
     function plusHandle() {
-      console.log("plusHandle()");
+      //console.log("plusHandle()");
       var newPage = getPages() + 1;
       lazy();
       $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
@@ -48,7 +48,7 @@ $( document ).ready(function() {
       updateAll();
     };
     function minusHandle() {
-      console.log("minusHandle()");
+      //console.log("minusHandle()");
       $(element+' .form-element-input.active').remove();
       $(element+' .form-element-numbers a.active').remove();
       $numbers.first().addClass('active');
@@ -56,7 +56,7 @@ $( document ).ready(function() {
       updateAll();
     };
     function numbersHandle(clicked) {
-      console.log("numbersHandle()");
+      //console.log("numbersHandle()");
       lazy();
       clicked.addClass('active');
       resetNumbers();
