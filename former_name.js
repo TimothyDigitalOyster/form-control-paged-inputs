@@ -31,11 +31,13 @@ $( document ).ready(function() {
     function resetNumbers() {
       $numbers = $(element+' .form-element-numbers a');
       $numbers.each( function(i) {
-          $(this).attr("data-id", i + 1).text(i + 1);
+          var j = i + 1;
+          $(this).data("id", j).text(j);
       });
       $pages = $(element+' .form-element-pages .form-element-input');
       $pages.each(function(i) {
-          $(this).attr("data-id", i + 1).children().attr("id", field+"-"+(i+1));
+          var j = i + 1;
+          $(this).data("id", j).children().attr("id", field+"-"+j);
       });
     };
 
@@ -62,7 +64,7 @@ $( document ).ready(function() {
       lazy();
       clicked.addClass('active');
 
-      $(element+' .form-element-input[data-id='+clicked.attr("id")+']').addClass('active');
+      $(element+' .form-element-input[data-id='+clicked.data("id")+']').addClass('active');
     };
 
     //Click Events
