@@ -29,12 +29,9 @@ $( document ).ready(function() {
       $(element+' .active').removeClass('active');
     };
     function resetNumbers() {
-      //console.log("resetNumber()");
-      var i=1;
-      $numbers.foreach( function($number) {
-          $number.data("id", i).text(i);
+      $numbers.each( function(i) {
+          this.data("id", i).text(i);
           $pages[i].data("id", i).children().attr("id", field+"-"+i);
-          ++i;
       });
     };
 
