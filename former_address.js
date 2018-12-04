@@ -26,9 +26,11 @@ $( document ).ready(function() {
       $(element+' .active').removeClass('active');
     };
     function resetNumbers() {
+      $numbers = $(element+' .form-element-numbers a');
       $numbers.each( function(i) {
           $(this).data("id", i + 1).text(i + 1);
       });
+      $pages = $(element+' .form-element-pages .form-element-input');
       $pages.each(function(i) {
           $(this).data("id", i + 1).children().attr("id", field+"-"+(i+1));
       });
