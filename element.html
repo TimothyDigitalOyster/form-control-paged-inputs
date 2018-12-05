@@ -1,3 +1,11 @@
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./sig.css" />
+</head>
+<body>
+<div class="wrapper" style="width:50%;margin:0 auto;"
 <form>
   <div class="former-name form-element-container">
     <div class="form-element-topbar">
@@ -33,7 +41,7 @@
           <p><a href="#" class="hide-elements">&#x3C; back</a> Former Address(es):</p>
         </div>
 
-        <div class="form-element-pagination">
+        <div class="form-element-pagination element-show">
           <div class="form-element-numbers">
             <a href='#' class="active" data-id=1>1</a>
           </div>
@@ -44,12 +52,22 @@
         </div>
       </div>
       <div class="form-element-pages element-show">
-        <div class="form-element-input active" data-id=1>
-          <textarea class="input" id="former-address-1"></textarea>
+        <div class="form-element-search">
+          <input type="text" id="address_search" />
         </div>
+        <div class="form-element-results">
+          <div class="form-element-result active" data-id=1>
+            <div class="address"></div>
+            <input type="text" id="add1_1" class="add1" style="display:none;"/>
+            <input type="text" id="add2_1" class="add2" style="display:none;"/>
+            <input type="text" id="add3_1" class="add3" style="display:none;"/>
+            <input type="text" id="add4_1" class="add4" style="display:none;"/>
+            <input type="text" id="add5_1" class="add5" style="display:none;"/>
+            <input type="text" id="postcode_1" class="postcode" style="display:none;"/>
+          </div>
       </div>
     </div>
-    <div id="container-sig" class="form-container">
+    <div id="container-sig" class="form-element-container">
 
       <div id="signature-pad" class="signature-pad">
         <div class="signature-pad--body">
@@ -60,17 +78,20 @@
           <div class="signature-pad--actions">
             <div>
               <button type="button" class="button clear" data-action="clear">Clear</button>
-              <button type="button" class="button" data-action="undo">Undo</button>
-            </div>
-            <div>
-              <button type="button" class="button save" data-action="save-png">Save Signature</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="container-submit" class="form-container">
+    <div id="container-submit" class="form-element-container">
       <input type="hidden" id="sig-field" />
-      <button id="submit" type="button" data-action="submit-form" class="form-submit-button" disabled>Submit Online Application</button>
+      <button id="submit" type="button" data-action="submit-form" class="form-submit-button">Submit Online Application</button>
     </div>
 </form>
+</div>
+<script src="./pca2.js"></script>
+<script src="./signature_pad.umd.js"></script>
+<script src="./app.js"></script>
+<script src="./former_address.js"></script>
+<script src="./former_name.js"></script>
+</body>

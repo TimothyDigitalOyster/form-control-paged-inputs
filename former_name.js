@@ -88,7 +88,10 @@ $( document ).ready(function() {
     $numbers.on("click", function(){
       numbersHandle($(this));
     });
-    $showButton.on("click", showElements);
+    $showButton.on("click", function(event) {
+      event.preventDefault()
+      showElements();
+    });
     $hideButton.on("click", hideElements);
 
     // Init
