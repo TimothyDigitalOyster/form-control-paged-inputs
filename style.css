@@ -1,0 +1,307 @@
+.form-element-container {
+  padding-bottom: 20px;
+}
+.form-element-container .form-element-topbar {
+  height: 60px;
+  background-color: lightgray;
+  border-bottom: 3px darkgrey solid;
+}
+.form-element-container .form-element-topbar .form-element-title {
+  float: left;
+  padding: 10px;
+}
+.form-element-container .form-element-topbar .form-element-title.show-element {
+  min-width: 50%;
+}
+.form-element-container .form-element-topbar .form-element-title.hide-element {
+  width: 100%;
+}
+.form-element-container .form-element-topbar .form-element-pagination {
+  float: right;
+  width: 50%;
+  padding: 20px;
+}
+.form-element-container .form-element-topbar .form-element-pagination .form-element-numbers {
+  float: left;
+  display: block;
+  width: 80%;
+  margin-top: 5px;
+}
+.form-element-container .form-element-topbar .form-element-pagination .form-element-numbers a {
+  margin-left: 5px;
+}
+.form-element-container .form-element-topbar .form-element-pagination .form-element-controls {
+  float: right;
+  display: block;
+  width: 10%;
+}
+.form-element-container .form-element-topbar .form-element-pagination .form-element-controls button {
+  padding: 2px;
+}
+.form-element-container .form-element-topbar .form-element-pagination:after {
+  clear: both;
+}
+.form-element-container .form-element-topbar:after {
+  clear: both;
+}
+.form-element-container .form-element-pages {
+  background-color: #eee;
+  width: 100%;
+  height: 40px;
+  padding: 10px 0;
+}
+.form-element-container .form-element-pages .form-element-input {
+  display: none;
+}
+.form-element-container .form-element-pages .form-element-input.active {
+  display: block;
+}
+.form-element-container .form-element-pages .input {
+  display: block;
+  padding-top: 10px;
+  margin: 0 auto;
+  width: 80%;
+}
+.form-element-container .form-element-pages .form-element-search {
+  float: left;
+  display: block;
+  width: 48%;
+  background-color: lightgrey;
+  padding: 5px;
+  margin-left: 1%;
+}
+.form-element-container .form-element-pages .form-element-search #address_search {
+  margin-left: 3%;
+  height: 30px;
+  border-radius: 5px 0 0 5px !important;
+  border-color: black;
+  width: 60%;
+}
+.form-element-container .form-element-pages .form-element-search #start-search {
+  margin-right: 3%;
+  border-color: black;
+  border-radius: 0 5px 5px 0 !important;
+  padding: 4px 0;
+  width: 9%;
+  position: absolute;
+  height: 30px;
+  background-color: #5DB992;
+  color: #fff;
+}
+.form-element-container .form-element-pages .form-element-search #address-select {
+  overflow: scroll;
+  height: 80%;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  border-radius: 5px 5px 5px 5px;
+}
+.form-element-container .form-element-pages .form-element-search #address-select span {
+  font-weight: bold;
+  padding: 7px;
+}
+.form-element-container .form-element-pages .form-element-search #address-select ul {
+  padding-left: 0;
+  list-style: none;
+}
+.form-element-container .form-element-pages .form-element-search #address-select li {
+  font-size: 12px;
+  padding: 5px;
+  display: inline-block;
+}
+.form-element-container .form-element-pages .form-element-search #address-select li:hover {
+  background-color: #ccc;
+}
+.form-element-container .form-element-pages .form-element-search #address-select li:nth-child(odd) {
+  background-color: #aaa;
+}
+.form-element-container .form-element-pages .form-element-search #address-select input {
+  visibility: hidden;
+  height: 0 !important;
+  width: 0 !important;
+}
+.form-element-container .form-element-pages .form-element-search #address-select label {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+.form-element-container .form-element-pages .form-element-search #address-select input:checked + label {
+  background: #bbb;
+}
+.form-element-container .form-element-pages .form-element-results {
+  display: block;
+  width: 49%;
+  height: 100%;
+  background-color: aliceblue;
+  float: left;
+}
+.form-element-container .form-element-pages .form-element-results .address {
+  padding: 20px;
+}
+.form-element-container .form-element-pages .form-element-results #address-edit {
+  display: none;
+}
+.form-element-container .form-element-pages .form-element-results .form-element-result {
+  display: none;
+}
+.form-element-container .form-element-pages .form-element-results .form-element-result.active {
+  display: block;
+}
+.form-element-container .form-submit-button {
+  display: block;
+  margin: 0 auto;
+  padding: 15px;
+}
+.form-element-container:after {
+  clear: both;
+}
+.form-element-container #container-sig {
+  display: block;
+  margin: 0 auto;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.form-element-container #container-sig * {
+  box-sizing: border-box;
+}
+.form-element-container #container-sig *::before,
+.form-element-container #container-sig *::after {
+  box-sizing: border-box;
+}
+.form-element-container #container-sig .signature-pad {
+  margin: 0 auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 460px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+  border-radius: 4px;
+  padding: 2%;
+}
+.form-element-container #container-sig .signature-pad::before,
+.form-element-container #container-sig .signature-pad::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 40%;
+  height: 10px;
+  bottom: 10px;
+  background: transparent;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+.form-element-container #container-sig .signature-pad::before {
+  left: 20px;
+  -webkit-transform: skew(-3deg) rotate(-3deg);
+  transform: skew(-3deg) rotate(-3deg);
+}
+.form-element-container #container-sig .signature-pad::after {
+  right: 20px;
+  -webkit-transform: skew(3deg) rotate(3deg);
+  transform: skew(3deg) rotate(3deg);
+}
+.form-element-container #container-sig .signature-pad .signature-pad--body {
+  height: 100px;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: 1px solid #f4f4f4;
+}
+.form-element-container #container-sig .signature-pad .signature-pad--body canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;
+}
+.form-element-container #container-sig .signature-pad .signature-pad--actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 5px;
+}
+.form-element-container #container-sig .signature-pad .signature-pad--actions .button {
+  padding: 5px !important;
+  border-radius: 5px !important;
+}
+.form-element-container #container-sig .signature-pad .signature-pad--footer {
+  color: #C3C3C3;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 8px;
+}
+.former-address .form-element-pages {
+  height: 300px;
+}
+.element-show {
+  display: none;
+}
+.element-hide {
+  display: block;
+}
+#address-edit {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: large;
+}
+#address {
+  position: absolute;
+}
+#address-error {
+  position: absolute;
+  color: red;
+  top: 58px;
+  left: 0;
+  width: 100%;
+}
+#container_postcode {
+  width: 100% !important;
+  height: 1px !important;
+  top: 221px;
+}
+#container_postcode input {
+  display: none !important;
+}
+@media only screen and (max-width: 600px) {
+  #start-search {
+    left: 170px !important;
+    padding: 3px 15px;
+  }
+  #address-select {
+    width: 90%;
+    height: 100%;
+  }
+  #address_search {
+    width: 171px !important;
+  }
+  #container_postcode {
+    width: 100% !important;
+    height: 1px !important;
+    top: 221px;
+  }
+  #address-error {
+    left: 77px;
+    width: 92px;
+  }
+  #container_postcode input {
+    display: none !important;
+  }
+}
