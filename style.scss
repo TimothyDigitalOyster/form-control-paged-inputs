@@ -1,57 +1,326 @@
 .form-element-container {
+  padding-bottom: 20px;
   .form-element-topbar {
-    border-bottom: 1px darkgrey solid;
-  }
-  .form-element-title {
-    padding-bottom: 10px;
-    font-size: large;
-    &.show-element {
-      width:100%;
+    height: 60px;
+    background-color: lightgray;
+    border-bottom: 3px darkgrey solid;
+    .form-element-title {
+      float:left;
+      padding: 10px;
+
+      &.show-element {
+        min-width:50%;
+      }
+      &.hide-element {
+        width:100%;
+      }
     }
-    &.hide-element {
-      width:50%;
-    }
-  }
-  .form-element-pagination {
-    display: block;
-    width: 50%;
-    padding: 5px 5px 27px;
-    background-color: lightgrey;
-    .form-element-numbers {
-      float: left;
-      display: block;
-      width: 80%;
-      margin-top: 5px;
-      margin-left: 5px;
-    }
-    .form-element-controls {
-      float: right;
-      display: block;
-      width: 10%;
-      button {
-        padding: 2px;
+    .form-element-pagination {
+      float:right;
+      width: 50%;
+      padding: 20px;
+      .form-element-numbers {
+        float: left;
+        display: block;
+        width: 80%;
+        margin-top: 5px;
+        a {
+          margin-left:5px;
+        }
+      }
+      .form-element-controls {
+        float: right;
+        display: block;
+        width: 10%;
+        button {
+          padding: 2px;
+        }
+      }
+      &:after {
+        clear: both;
       }
     }
     &:after {
       clear: both;
     }
   }
+
   .form-element-pages {
     background-color: #eee;
     width: 100%;
     height: 40px;
-    padding: 10px;
+    padding: 10px 0;
+    .form-element-input{
+      display:none;
+      &.active {
+        display:block;
+      }
+    }
     .input {
       display: block;
       padding-top: 10px;
       margin: 0 auto;
       width: 80%;
     }
+    .form-element-search {
+      float:left;
+      display:block;
+      width:48%;
+      background-color:lightgrey;
+      padding:5px;
+      margin-left:1%;
+    #address_search {
+        margin-left:3%;
+        height: 30px;
+        border-radius: 5px 0px 0px 5px !important;
+        border-color: black;
+        width: 60%;
+      }
+      #start-search {
+        margin-right:3%;
+        border-color: black;
+        border-radius: 0px 5px 5px 0px !important;
+        padding: 4px 0;
+        width:9%;
+        position: absolute;
+        height: 30px;
+        background-color: #5DB992;
+        color: #fff;
+      }
+      #address-select {
+        overflow: scroll;
+        height: 80%;
+        width: 95%;
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        //border: 3px solid #aaa;
+        border-radius: 5px 5px 5px 5px;
+        span {
+          font-weight: bold;
+          padding: 7px;
+        }
+        ul {
+          padding-left:0px;
+          list-style: none;
+        }
+        li {
+          font-size:12px;
+          padding:5px;
+          display: inline-block;
+          &:hover {
+            background-color: #ccc;
+          }
+          &:nth-child(odd) {
+            background-color: #aaa;
+          }
+        }
+        input {
+          visibility: hidden;
+          height: 0px !important;
+          width: 0px !important;
+        }
+        label {
+          cursor: pointer;
+          width:100%;
+          display: block;
+        }
+        input:checked + label {
+          background: #bbb;
+        }
+      }
+    }
+    .form-element-results {
+      display:block;
+      width:49%;
+      height:100%;
+      background-color:aliceblue;
+      float:left;
+      .address {
+        padding:20px;
+      }
+      #address-edit {
+        display:none;
+      }
+      .form-element-result{
+        display:none;
+        &.active {
+          display:block;
+        }
+      }
+
+    }
   }
-  .element-show {
-    display:none;
-  }
-  .element-hide {
+  .form-submit-button {
     display:block;
+    margin:0 auto;
+    padding: 15px;
+  }
+  &:after {
+      clear: both;
+  }
+  #container-sig {
+    display:block;
+    margin:0 auto;
+    height:150px;
+    margin-bottom:20px;
+    * {
+      box-sizing: border-box;
+      &::before, &::after {
+        box-sizing: border-box;
+      }
+    }
+    .signature-pad {
+      margin:0 auto;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      font-size: 10px;
+      width: 100%;
+      height: 100%;
+      max-width: 700px;
+      max-height: 460px;
+      border: 1px solid #e8e8e8;
+      background-color: #fff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+      border-radius: 4px;
+      padding: 2%;
+      &::before, &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        width: 40%;
+        height: 10px;
+        bottom: 10px;
+        background: transparent;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+      }
+      &::before {
+        left: 20px;
+        -webkit-transform: skew(-3deg) rotate(-3deg);
+        transform: skew(-3deg) rotate(-3deg);
+      }
+      &::after {
+        right: 20px;
+        -webkit-transform: skew(3deg) rotate(3deg);
+        transform: skew(3deg) rotate(3deg);
+      }
+      .signature-pad--body {
+        height: 100px;
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        border: 1px solid #f4f4f4;
+        canvas {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 4px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;
+        }
+      }
+      .signature-pad--actions {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-top: 8px;
+        padding: 5px;
+        .button {
+          padding: 5px !important;
+          border-radius: 5px !important;
+        }
+      }
+      .signature-pad--footer {
+        color: #C3C3C3;
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 8px;
+      }
+
+    }
   }
 }
+
+.former-address .form-element-pages {
+  height: 300px;
+}
+
+.element-show {
+  display:none;
+}
+.element-hide {
+  display:block;
+}
+
+/* PCA 2 */
+
+#address-edit {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: large;
+}
+
+#address {
+  position: absolute;
+  //top: 16px;
+  //left: 40px;
+}
+
+#address-error {
+  position: absolute;
+  color: red;
+  top: 58px;
+  left: 0px;
+  width: 100%;
+}
+
+#container_postcode {
+  width: 100% !important;
+  height: 1px !important;
+  top: 221px;
+  input {
+    display: none !important;
+  }
+}
+
+/*#container_postcode label.error {display:none !important;}*/
+
+@media only screen and (max-width: 600px) {
+  #start-search {
+    left: 170px !important;
+    padding: 3px 15px;
+  }
+  #address-select {
+    width: 90%;
+    height: 100%;
+  }
+  #address_search {
+    width: 171px !important;
+  }
+  #container_postcode {
+    width: 100% !important;
+    height: 1px !important;
+    top: 221px;
+  }
+  #address-error {
+    left: 77px;
+    width: 92px;
+  }
+  #container_postcode input {
+    display: none !important;
+  }
+  /*#container_postcode label.error {display:none !important;}*/
+}
+
+/* PCA 2 */
