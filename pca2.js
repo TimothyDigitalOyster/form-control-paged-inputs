@@ -125,13 +125,14 @@ $(function() {
 
 
   function invalidPC(state) {
-    $('#postcode-switch').text('#container_postcode label.error {display:none !important;}');
+    //$('#postcode-switch').text('#container_postcode label.error {display:none !important;}');
     if (state) {
-      $('#container_postcode label.error').remove();
-      $(searchField).addClass('error').after("<label for='address_search' generated='true' class='error' style=''>Please enter a valid postcode</label>");
+      $('.form-element-search label.error').remove();
+      $(searchField).addClass('error');
+      $('#start-search').after("<label for='address_search' generated='true' class='error' style=''>Please enter a valid postcode</label>");
     } else {
       $(searchField).removeClass('error').css("border-color", "black");
-      $('#container_address_search label.error').remove();
+      $('.form-element-search label.error').remove();
     }
   }
 

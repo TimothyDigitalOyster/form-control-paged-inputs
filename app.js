@@ -73,3 +73,7 @@ submit.on("click", function(event) {
     //postMessage("close", "https://www.digitaloyster.co.uk/dev/sigform/");
   }
 });
+
+$( document ).ready(function() {
+    resizeCanvas();
+});

@@ -59,13 +59,14 @@ $( document ).ready(function() {
 
     //Click Handlers
     function plusHandle() {
-      if ($(element+' .form-element-input.active textarea').val() != '') {
+      if ($(element+' .active .add1').val() != '') {
         var newPage = getPages() + 1;
         lazy();
         $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
         //$pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><textarea class='input' id='"+field+"-"+newPage+"'></textarea></div>");
         $pageContainer.append('<div class="form-element-result active" data-id='+newPage+'><div class="address"></div><input type="text" id="add1_'+newPage+'" class="add1" style="display:none;"/><input type="text" id="add2_'+newPage+'" class="add2" style="display:none;"/><input type="text" id="add3_'+newPage+'" class="add3" style="display:none;"/><input type="text" id="add4_'+newPage+'" class="add4" style="display:none;"/><input type="text" id="add5_'+newPage+'" class="add5" style="display:none;"/><input type="text" id="postcode_'+newPage+'" class="postcode" style="display:none;"/></div>');
         updateAll();
+        $('#address_search').focus();
       }
     };
     function minusHandle() {

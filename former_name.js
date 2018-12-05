@@ -62,6 +62,7 @@ $( document ).ready(function() {
         $numberContainer.append("<a href='#' class='active' data-id="+newPage+">"+newPage+"</a>");
         $pageContainer.append("<div class='form-element-input active' data-id="+newPage+"><input type='text' class='input' id='"+field+"-"+newPage+"' /></div>");
         updateAll();
+        $(element+' .form-element-input.active input').focus();
       }
     };
     function minusHandle() {

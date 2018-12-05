@@ -30,6 +30,10 @@
 .form-element-container .form-element-topbar .form-element-pagination .form-element-numbers a {
   margin-left: 5px;
 }
+.form-element-container .form-element-topbar .form-element-pagination .form-element-numbers a.active {
+  font-size: 20px;
+  color: red;
+}
 .form-element-container .form-element-topbar .form-element-pagination .form-element-controls {
   float: right;
   display: block;
@@ -58,7 +62,8 @@
 }
 .form-element-container .form-element-pages .input {
   display: block;
-  padding-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
   margin: 0 auto;
   width: 80%;
 }
@@ -88,6 +93,15 @@
   background-color: #5DB992;
   color: #fff;
 }
+.form-element-container .form-element-pages .form-element-search input.error {
+  color: red;
+  border-color: red !important;
+}
+.form-element-container .form-element-pages .form-element-search label.error {
+  margin-left: 10px;
+  color: red;
+  display: inline-block;
+}
 .form-element-container .form-element-pages .form-element-search #address-select {
   overflow: scroll;
   height: 80%;
@@ -106,6 +120,7 @@
   list-style: none;
 }
 .form-element-container .form-element-pages .form-element-search #address-select li {
+  width: 100%;
   font-size: 12px;
   padding: 5px;
   display: inline-block;
@@ -156,20 +171,20 @@
 .form-element-container:after {
   clear: both;
 }
-.form-element-container #container-sig {
+.form-element-container#container-sig {
   display: block;
   margin: 0 auto;
   height: 150px;
   margin-bottom: 20px;
 }
-.form-element-container #container-sig * {
+.form-element-container#container-sig * {
   box-sizing: border-box;
 }
-.form-element-container #container-sig *::before,
-.form-element-container #container-sig *::after {
+.form-element-container#container-sig *::before,
+.form-element-container#container-sig *::after {
   box-sizing: border-box;
 }
-.form-element-container #container-sig .signature-pad {
+.form-element-container#container-sig .signature-pad {
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
@@ -190,8 +205,8 @@
   border-radius: 4px;
   padding: 2%;
 }
-.form-element-container #container-sig .signature-pad::before,
-.form-element-container #container-sig .signature-pad::after {
+.form-element-container#container-sig .signature-pad::before,
+.form-element-container#container-sig .signature-pad::after {
   position: absolute;
   z-index: -1;
   content: "";
@@ -201,17 +216,17 @@
   background: transparent;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
-.form-element-container #container-sig .signature-pad::before {
+.form-element-container#container-sig .signature-pad::before {
   left: 20px;
   -webkit-transform: skew(-3deg) rotate(-3deg);
   transform: skew(-3deg) rotate(-3deg);
 }
-.form-element-container #container-sig .signature-pad::after {
+.form-element-container#container-sig .signature-pad::after {
   right: 20px;
   -webkit-transform: skew(3deg) rotate(3deg);
   transform: skew(3deg) rotate(3deg);
 }
-.form-element-container #container-sig .signature-pad .signature-pad--body {
+.form-element-container#container-sig .signature-pad .signature-pad--body {
   height: 100px;
   position: relative;
   -webkit-box-flex: 1;
@@ -219,7 +234,7 @@
   flex: 1;
   border: 1px solid #f4f4f4;
 }
-.form-element-container #container-sig .signature-pad .signature-pad--body canvas {
+.form-element-container#container-sig .signature-pad .signature-pad--body canvas {
   position: absolute;
   left: 0;
   top: 0;
@@ -228,7 +243,7 @@
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;
 }
-.form-element-container #container-sig .signature-pad .signature-pad--actions {
+.form-element-container#container-sig .signature-pad .signature-pad--actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,11 +253,11 @@
   margin-top: 8px;
   padding: 5px;
 }
-.form-element-container #container-sig .signature-pad .signature-pad--actions .button {
+.form-element-container#container-sig .signature-pad .signature-pad--actions .button {
   padding: 5px !important;
   border-radius: 5px !important;
 }
-.form-element-container #container-sig .signature-pad .signature-pad--footer {
+.form-element-container#container-sig .signature-pad .signature-pad--footer {
   color: #C3C3C3;
   text-align: center;
   font-size: 1.2em;
